@@ -1,3 +1,7 @@
+* {
+    user-select: none;
+}
+
 body {
     font-family: Helvetica;
 }
@@ -18,7 +22,7 @@ body {
     padding: 20px;
 }
 
-a.button {
+/* a.button {
     text-decoration: none;
     display: inline-block;
     background-color: white;
@@ -27,15 +31,65 @@ a.button {
     border-radius: 10px;
     border: solid black;
     border-width: 2px;
+} */
+
+a {
+    text-decoration: none;
 }
+
+.launchButton {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: inherit;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 17px;
+    padding: 0.8em 1.3em 0.8em 0.9em;
+    color: white;
+    background: #ad5389;
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+    border: none;
+    letter-spacing: 0.05em;
+    border-radius: 16px;
+}
+
+button svg {
+    margin-right: 3px;
+    transform: rotate(30deg);
+    transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+button span {
+    transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+button:hover svg {
+    transform: translateX(5px) rotate(90deg);
+}
+
+button:hover span {
+    transform: translateX(7px);
+}
+
 
 .abortButton {
     display: inline-block;
     text-decoration: none;
     color: white;
     background-color: rgb(199, 30, 30);
-    padding: 40px;
     border-radius: 160px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 20px;
+    padding-right: 40px;
+    border: solid 2px black;
+    box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.5), -5px -5px 15px rgba(255, 255, 255, 0.3), inset 1px 1px 7px rgba(255, 255, 255, 0.7);
 }
 
 .right {
